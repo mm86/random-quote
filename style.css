@@ -1,0 +1,12 @@
+body {
+
+    background: rgb(68, 241, 250);
+}
+
+.display-quote {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid gray;
+    text-align: center;
+}
+
