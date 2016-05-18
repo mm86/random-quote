@@ -1,6 +1,6 @@
 body {
 
-    background: rgb(68, 241, 250);
+    background: #fff;
 }
 
 .display-quote {
@@ -8,5 +8,14 @@ body {
     margin: 20px auto;
     border: 1px solid gray;
     text-align: center;
+    padding: 30px 0;
+    background: #00ffbf;
+    border-radius: 20px;
+
+}
+
+p {
+
+    font-size: 18px;
 }
 
