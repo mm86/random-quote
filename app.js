@@ -36,7 +36,7 @@ $(function() {
     }
 
     function errorHandling(jqxhr, textStatus, errorThrown) {
-        console.log("Request Failed: " + textStatus + ", " + errorThrown);
+        alert("Request Failed: " + textStatus + ", " + errorThrown);
     }
 
     //on clicking "Twitter" button, open the twitter link with the quote embedded
