@@ -1,14 +1,8 @@
 $(function() {
     //on page load, display a quote
     $.ajax({
-            url: "http://api.forismatic.com/api/1.0/",
-            jsonp: "jsonp",
-            dataType: "jsonp",
-            data: {
-                method: "getQuote",
-                lang: "en",
-                format: "jsonp"
-            }
+            url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
+            dataType: 'jsonp',
         })
         .done(result)
         .fail(errorHandling);
@@ -16,23 +10,16 @@ $(function() {
     //on clicking "new quote" button, display a new quote
     $('.new-quote').click(function() {
         $.ajax({
-                url: "http://api.forismatic.com/api/1.0/",
-                jsonp: "jsonp",
-                dataType: "jsonp",
-                data: {
-                    method: "getQuote",
-                    lang: "en",
-                    format: "jsonp"
-                }
+                url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?',
+                dataType: 'jsonp',
             })
             .done(result)
             .fail(errorHandling);
     });
 
     function result(response) {
-        console.log(response);
-        $('.quote').html(JSON.stringify(response.quoteText));
-        $('.person').html(JSON.stringify(response.quoteAuthor));
+        $('.quote').text(response.quoteText);
+        $('.person').text(response.quoteAuthor);
     }
 
     function errorHandling(jqxhr, textStatus, errorThrown) {
