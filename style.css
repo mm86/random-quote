@@ -3,6 +3,18 @@ body {
     background: #fff;
 }
 
+.quote {
+  quotes: "“" "”" "‘" "’";
+}
+
+.quote:before {
+    content: open-quote;
+}
+
+.quote:after {
+    content: close-quote;
+}
+
 .display-quote {
     width: 50%;
     margin: 20px auto;
