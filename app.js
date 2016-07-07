@@ -1,4 +1,4 @@
-
+$(function(){
 //on page load, display a quote
 $.ajax({
       url: "http://api.forismatic.com/api/1.0/",
@@ -47,7 +47,7 @@ $('.twitter').click(function() {
 
 });
 
-
+});
 
 
 
